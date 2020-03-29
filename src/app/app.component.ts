@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'qponer-web';
+  title = 'Qpon';
+
+  public links = [
+    {
+      name: 'home',
+      url: 'home',
+    },
+    {
+      name: 'contacts',
+      url: 'contacts'
+    },
+    {
+      name: 'dynamic',
+      url: 'contacts/dynamic-load'
+    }
+  ];
 }
