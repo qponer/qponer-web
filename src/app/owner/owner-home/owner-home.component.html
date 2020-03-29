@@ -1,1 +1,14 @@
-<p>owner-home works!</p>
+<div id="main-container">
+  <span>List of top contributors: </span>
+  <ng-container *ngIf="(topContributors$ | async) as topContributors; else emptyList">
+    <ul class="list-group" *ngIf="topContributors.length; else emptyList">
+      <li class="list-group-item" *ngFor="let contributor of topContributors">
+        {{contributor.name}} - {{contributor.amount}}
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template #emptyList>
+    there are no contributors
+  </ng-template>
+</div>

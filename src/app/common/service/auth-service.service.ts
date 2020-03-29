@@ -33,8 +33,21 @@ export class AuthService {
 
   getAuthorizationHeaders(): HttpHeaders {
     let headers = new HttpHeaders();
-    headers = headers.set('Authentication', 'Bearer ' + localStorage.getItem('jwt'));
+    headers = headers.set('Authorization', 'Bearer ' + localStorage.getItem('jwt'));
     return headers;
+  }
+
+  getOwnerId(): string {
+    const userType = this.getUserType();
+    if (userType === 'BUSINESS_OWNER') {
+      return localStorage.getItem('id');
+    } else {
+      return null;
+    }
+  }
+
+  getUserType(): string {
+    return localStorage.getItem('type');
   }
 
   login(credentials: Credentials): void {

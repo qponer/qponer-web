@@ -5,7 +5,7 @@ import {ContributorHomeComponent} from './contributor-home/contributor-home.comp
 
 const router: Routes = [
   {
-    path: 'contributor',
+    path: '',
     children: [
       {
         path: 'register',

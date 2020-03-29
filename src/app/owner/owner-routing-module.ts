@@ -5,16 +5,16 @@ import {OwnerHomeComponent} from './owner-home/owner-home.component';
 
 const router: Routes = [
   {
-    path: 'owner',
+    path: '',
     children: [
+      {
+        path: '',
+        component: OwnerHomeComponent
+      },
       {
         path: 'register',
         component: RegisterOwnerComponent
       },
-      {
-        path: '',
-        component: OwnerHomeComponent
-      }
     ]
   }
 ];
