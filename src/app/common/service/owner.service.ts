@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AuthService} from './auth-service.service';
 import {Observable, ReplaySubject} from 'rxjs';
-import {RankedContributor} from '../model';
 import {environment} from '../../../environments/environment';
+import {RankedContributor} from '../model';
 
 @Injectable({
   providedIn: 'root'
